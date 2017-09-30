@@ -14,7 +14,7 @@ def smallest_missing_integer(l):
     n = len(l)
     for i in range(n):
         a = l[i]
-        while (a <= n) and (a != l[a - 1]) and (a > 0):
+        while (a <= n) and (a > 0) and (a != l[a - 1]):
             l[a - 1], a = a, l[a - 1]  # swap a and l[a-1]
 
     # Second loop, finding the smallest positive integer missing.
